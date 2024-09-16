@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "@prisma/client": "^5.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.20.0",
+    "nodemon": "^3.1.4",
+    "prisma": "^5.19.1"
+  },
+  "name": "api",
+  "version": "1.0.0",
+  "description": "api_tp1_backend",
+  "main": "app.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon app"
+  },
+  "author": "alan",
+  "license": "ISC"
+}
