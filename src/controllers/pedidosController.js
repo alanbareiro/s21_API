@@ -23,7 +23,6 @@ const crearPedido = async (req, res) => {
         console.error(error);
         res.status(500).json({ error: 'Error al crear el Pedido' }); // 500 Internal Server Error
     }
-    res.json(result);
 }
 
 const actualizarPedido = async (req, res) => {
