@@ -12,8 +12,17 @@ const obtenerPedido = async (req, res) => {
 };
 
 const crearPedido = async (req, res) => {
-    const {descripcion, clienteId} = req.body;
-    const result = await pedidosService.crearPedido(descripcion, clienteId);
+    try 
+    {
+        const {descripcion, clienteId} = req.body;
+        const result = await pedidosService.crearPedido(descripcion, clienteId);
+        res.status(201).json(result);
+    }
+    catch(error)
+    {
+        console.error(error);
+        res.status(500).json({ error: 'Error al crear el Pedido' }); // 500 Internal Server Error
+    }
     res.json(result);
 }
 
